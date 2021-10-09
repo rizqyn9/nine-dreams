@@ -1,0 +1,10 @@
+.grid-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.box{
+    width: 20rem;
+    height: 10rem;
+    background-color: purple;
+}

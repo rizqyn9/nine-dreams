@@ -1,0 +1,13 @@
+.homepage{
+    display: block;
+
+    .content-container{
+        height: 100%;
+        background-color: red;
+    }
+
+    .child-1{
+        background-color: $color2;
+        height: 100%;
+    }
+}

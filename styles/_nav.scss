@@ -1,0 +1,38 @@
+.nav{
+    position: fixed;
+    height: $navHeight;
+    width: 100%;
+    
+    background-color: $color2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 5rem 0 5rem;
+    border-bottom: 2px solid $color3;
+
+    .menu-container{
+        width: 30rem;
+        height: 100%;
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        
+        .menu{
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover{
+                background-color: $color3;
+                color: $color1;
+            }
+        }
+    }
+}
