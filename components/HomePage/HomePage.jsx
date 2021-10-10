@@ -25,7 +25,7 @@ export default function HomePage() {
                     <div className="right-content">
                         <div className="content-overflow">
                             <div className="img-container">
-                                <img src="/images/homepage-left.jpg" alt="" />
+                                <img src="/images/homepage-left.JPG" alt="" />
                             </div>
                             <div className="title-container">
                                 <div className="text-md text-1">
