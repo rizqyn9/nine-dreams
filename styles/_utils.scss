@@ -27,3 +27,14 @@
 .text-md{
     font-size: 2rem;
 }
+
+.text-lg{
+    font-size: 3rem;
+    @media (max-width: 840px) {
+        font-size: 2rem;
+    }
+    @media (max-width: 420px) {
+        font-size: 1.5rem;
+    }
+    
+}

@@ -1,0 +1,23 @@
+@import "./productItem";
+
+.products{
+    background-color: $color2;
+    
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+
+    .content-container{
+        width: 80%;
+
+        // background-color: red;
+        
+        .top-products{
+            background-color: yellow; 
+        }
+        .main-content{
+            background-color: orange; 
+            
+        }
+    }
+}
