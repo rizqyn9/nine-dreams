@@ -4,9 +4,10 @@ export default function Nav (){
             <div className="logo">Logo</div>
             <div className="menu-container">
                 <MenuItem name="home"/>
-                <MenuItem name="home"/>
-                <MenuItem name="home"/>
-                <MenuItem name="home"/>
+                <MenuItem name="products"/>
+                <MenuItem name="creative communication"/>
+                <MenuItem name="about"/>
+                <MenuItem name="contact"/>
             </div>
         </nav>
     )
