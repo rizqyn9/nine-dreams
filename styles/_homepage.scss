@@ -4,10 +4,12 @@
     @media (max-width: 850px) {
         max-height: none;
     }
-
+    
     .content-container{
+        display: flex;
+        height: max-content;
+
         padding-top: 3rem;
-        height: 100%;
 
         @media (max-width: 850px) {
             padding-top: 0;
@@ -16,7 +18,8 @@
     
     .child-1{
         height: 100%;
-        
+        flex: 0 1 auto;
+
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -24,11 +27,17 @@
         background-color: $color1;
         
         position: relative;
+
+        @media (max-width: 850px) {
+            height: calc(100vh - $navHeight);
+        }        
     }
     
     .left-content{
         width: 90%;
         height: 100%;
+        flex: 1 1 50vw;
+
         padding: 2rem 0 2rem 0;
 
         display: flex;
@@ -39,6 +48,14 @@
 
         @media (max-width: 850px) {
             width: 100%;
+            
+            .content-overflow{
+                width: 80% !important;
+
+                .title-container{
+                    line-height: 3em;
+                }
+            }
         }
 
         .content-overflow{
@@ -125,8 +142,7 @@
                 .title-container{
                     width: 100%;
                     font-size: 2rem;
-                }
-                
+                }                
             }
         }
     }

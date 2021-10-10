@@ -3,7 +3,7 @@ import Images from "next/image"
 export default function HomePage() {
     return(
         <section className="homepage">
-            <div className="grid-2 content-container">
+            <div className="content-container">
                 <div className="child-1">
                     <div className="left-content">
                         <div className="content-overflow">
