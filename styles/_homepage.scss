@@ -3,6 +3,10 @@
     .content-container{
         height: 100%;
         padding-top: 3rem;
+
+        @media (max-width: 850px) {
+            padding-top: 0;
+        }
     }
     
     .child-1{
@@ -15,10 +19,6 @@
         background-color: $color1;
         
         position: relative;
-        
-        @media (max-width: 500px) {
-            
-        }
     }
     
     .left-content{
