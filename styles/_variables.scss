@@ -1,7 +1,13 @@
 // Font
+@font-face {
+    font-family: 'kenoky';
+    src: url('/fonts/kenoky/KenokyLight.ttf');
+}
+
+$fontKenoky:'kenoky', arial;
 
 // Properties
-$navHeight:3rem;
+$navHeight:5rem;
 
 // Colors
 $color1 : #F3F0D7;

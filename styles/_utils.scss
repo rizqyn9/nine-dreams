@@ -1,10 +1,27 @@
 .grid-2{
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 850px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .box{
     width: 20rem;
     height: 10rem;
     background-color: purple;
+}
+
+.padding-container{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.img-container{
+    overflow: hidden;
+}
+
+.text-md{
+    font-size: 2rem;
 }

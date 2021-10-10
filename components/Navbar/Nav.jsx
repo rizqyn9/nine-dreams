@@ -1,6 +1,6 @@
 export default function Nav (){
     return (
-        <nav className="nav">
+        <nav className="nav padding-container">
             <div className="logo">Logo</div>
             <div className="menu-container">
                 <MenuItem name="home"/>
