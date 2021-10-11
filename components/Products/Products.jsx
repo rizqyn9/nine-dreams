@@ -1,3 +1,5 @@
+import {products} from "../../data-config"
+
 export default function Products(){
     return (
         <section className="products">
@@ -18,21 +20,21 @@ export default function Products(){
 function ListContainer() {
     return (
         <div className="list-container">
-            <ProductItem/>
-            <ProductItem/>
-            <ProductItem/>
-            <ProductItem/>
-            <ProductItem/>
-            <ProductItem/>
-            <ProductItem/>
+            {
+                products.map((val, index) => {
+                    return <ProductItem data={val} index={index}/>
+                })
+            }
         </div>
     )
 }
 
-function ProductItem() {
+function ProductItem(props) {
+    const {data, index} = props;
+
     return (
-        <div className="product-item">
-            <img src="/images/7.JPG" alt="" />
+        <div className="product-item" key={index}>
+            <img src={data.image} alt={data.title} />
         </div>
     )
 }

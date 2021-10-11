@@ -1,0 +1,12 @@
+.contact{
+    background-color: rgb(94, 46, 2);
+    color: $color1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content-container{
+        width: 80%;
+    }
+}

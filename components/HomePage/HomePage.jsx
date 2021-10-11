@@ -1,4 +1,4 @@
-import Images from "next/image"
+import {HomePage as data} from "../../data-config"
 
 export default function HomePage() {
     return(
@@ -16,7 +16,7 @@ export default function HomePage() {
                                 </div>
                             </div>
                             <div className="img-container">
-                                <img src="/images/homepage-right.JPG" alt="" className="img-home-left" />
+                                <img src={data.leftPage.image} alt="" className="img-home-left" />
                             </div>
                         </div>
                     </div>
@@ -25,7 +25,7 @@ export default function HomePage() {
                     <div className="right-content">
                         <div className="content-overflow">
                             <div className="img-container">
-                                <img src="/images/homepage-left.JPG" alt="" />
+                                <img src={data.rightPage.image} alt="" />
                             </div>
                             <div className="title-container">
                                 <div className="text-md text-1">
