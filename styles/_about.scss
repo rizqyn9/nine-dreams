@@ -1,0 +1,41 @@
+.about{
+    display: flex;
+    justify-content: center;
+    color: $color3;
+    // align-items: center;
+
+    .content-container{
+        width: 80%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title{
+            flex: 0 0 10vh;
+
+            font-weight: 900;
+            font-size: 3rem;
+            font-style: italic;
+        }
+
+        .content{
+            width: 60%;
+            text-align: center;
+            line-height: 1.5em;
+        }
+    }
+
+    @media (max-width: 840px) {
+        padding: 3rem 0 3rem 0;
+
+        .content-container{
+            width: 100%;
+
+            .content{
+                width: 90%;
+            }
+        }
+    }
+}

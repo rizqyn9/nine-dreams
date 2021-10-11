@@ -18,15 +18,27 @@ body{
 main{
     background-color: red;
     height: max-content;
+    
+    @media (max-width: 840px) {
+        padding-top: $navHeight;
+        
+    }
 }
 
+//FIXME
 section{
     padding-top: $navHeight;
-    min-height: 100vh;
+    min-height: 100vh;          // Fix me 
 
     background-color: $color1;
+
+    @media (orientation: portrait) {
+        min-height: max-content;
+        padding-top: 0;
+    }
 }
 
 @import "./nav";
 @import "./homepage";
 @import "./products";
+@import "./about";

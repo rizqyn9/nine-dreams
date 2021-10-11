@@ -32,6 +32,7 @@
     @media (max-width: 840px) {
         min-height: max-content;
         padding-bottom: calc($navHeight + 1rem);
+        padding-top: calc($navHeight + 1rem);
 
         .content-container{
             width: 90%;
