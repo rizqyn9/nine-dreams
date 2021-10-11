@@ -1,9 +1,32 @@
 .product-item{
-    width: 10rem;
-    height: 15rem;
-    border : 1px solid black;
+    flex: 0 0 20rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+
+    font-size: 40px;
+    background-color: red;
+    border: 1px solid $color3;
 }
 
 .list-container{
     display: flex;
+    gap: 5px;
+    height: 30rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    
 }

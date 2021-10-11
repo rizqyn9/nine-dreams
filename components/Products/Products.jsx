@@ -32,7 +32,7 @@ function ListContainer() {
 function ProductItem() {
     return (
         <div className="product-item">
-
+            <img src="/images/7.JPG" alt="" />
         </div>
     )
 }

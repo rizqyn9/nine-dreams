@@ -1,23 +1,40 @@
 @import "./productItem";
 
 .products{
-    background-color: $color2;
-    
     display: flex;
     justify-content: center;
-    // align-items: center;
+    align-items: center;
+
+    background-color: $color2;
 
     .content-container{
         width: 80%;
+        display: flex;
+        flex-direction: column;
 
-        // background-color: red;
-        
         .top-products{
-            background-color: yellow; 
+            flex: 0 0 auto;
+            min-height: 7vh;
+            
+            display: flex;
+            // align-items: center;
+
+            .title{
+                margin-bottom: 1rem;
+            }
         }
         .main-content{
-            background-color: orange; 
+            flex: 0 0 auto;
             
+        }
+    }
+
+    @media (max-width: 840px) {
+        min-height: max-content;
+        padding-bottom: calc($navHeight + 1rem);
+
+        .content-container{
+            width: 90%;
         }
     }
 }

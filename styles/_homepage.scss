@@ -1,19 +1,10 @@
 .homepage{
-    max-height: 100vh;
-
-    @media (max-width: 850px) {
-        max-height: none;
-    }
     
     .content-container{
-        display: flex;
         height: max-content;
-
         padding-top: 3rem;
 
-        @media (max-width: 850px) {
-            padding-top: 0;
-        }
+        display: flex;
     }
     
     .child-1{
@@ -27,10 +18,6 @@
         background-color: $color1;
         
         position: relative;
-
-        @media (max-width: 850px) {
-            height: calc(100vh - $navHeight);
-        }        
     }
     
     .left-content{
@@ -45,18 +32,6 @@
         justify-content: center;
 
         background-color: $color2;
-
-        @media (max-width: 850px) {
-            width: 100%;
-            
-            .content-overflow{
-                width: 80% !important;
-
-                .title-container{
-                    line-height: 3em;
-                }
-            }
-        }
 
         .content-overflow{
             width: 60%;
@@ -98,14 +73,6 @@
         align-items: center;
         justify-content: center;
 
-        @media (max-width: 850px) {
-            margin-top: 3rem;
-
-            .content-overflow{
-                width: 60% !important;
-            }
-        }
-
         .right-content{
             width: 100%;
             height: 100%;
@@ -143,6 +110,59 @@
                     width: 100%;
                     font-size: 2rem;
                 }                
+            }
+        }
+    }
+}
+
+// 850px
+
+.homepage{
+    @media (max-width: 850px) {
+        max-height: max-content !important;
+
+        .content-container{
+            padding-top: 0;
+            padding-bottom: 2rem;
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        .child-1{
+            height: calc(100vh - $navHeight);
+        }
+        
+        .left-content{
+            width: 100%;
+            
+            .content-overflow{
+                width: 90%;
+    
+                .title-container{
+                    line-height: 3em;
+                    flex: 1 1 15vh;
+                }
+
+                .img-container{
+                    flex: 0 0 60vh;
+
+                    display: flex;
+                    align-items: flex-end;
+                    // background-color: red;
+
+                    .img-home-left{
+                        height: inherit;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+        
+        .child-2{
+            margin-top: 4rem;
+    
+            .content-overflow{
+                width: 90% !important;
             }
         }
     }
