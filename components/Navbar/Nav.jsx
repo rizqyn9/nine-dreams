@@ -1,7 +1,25 @@
+import {useEffect} from 'react';
+import {motion} from "framer-motion"
+
 export default function Nav (){
+    useEffect(() => {
+
+    }, [])
+
     return (
-        <nav className="nav padding-container">
-            <div className="logo">Logo</div>
+        <motion.nav 
+            initial={{
+                y:"-10vh",
+            }}
+            animate={{
+                y:0,
+                transition:{
+                    duration:.5,
+                }
+            }}
+            className="nav padding-container"
+        >
+            <div className="logo">ninedreams</div>
             <div className="menu-container">
                 <MenuItem name="home"/>
                 <MenuItem name="products"/>
@@ -9,7 +27,7 @@ export default function Nav (){
                 <MenuItem name="about"/>
                 <MenuItem name="contact"/>
             </div>
-        </nav>
+        </motion.nav>
     )
 }
 

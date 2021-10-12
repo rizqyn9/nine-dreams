@@ -1,4 +1,7 @@
 .contact{
+    min-height: max-content;
+    padding: 3rem 0 3rem 0;
+
     background-color: rgb(94, 46, 2);
     color: $color1;
 
@@ -8,5 +11,40 @@
 
     .content-container{
         width: 80%;
+
+        .title {
+            margin-bottom: 1rem;
+        }
+
+        .footer{
+            .tag-line{
+            }
+            .content{
+                display: flex;  
+                margin-top: 2rem;
+                
+                .title{
+                    font-style: italic;
+                    letter-spacing: .2em;
+                    font-weight: 600;
+
+                }
+
+                .child{
+                    min-width: 30vw;
+                    letter-spacing: .1em;
+                }
+            }
+        }
     }
+}
+
+.social{
+    img{
+        filter: invert(1);
+    } 
+}
+
+.site{
+
 }

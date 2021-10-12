@@ -8,21 +8,17 @@
 }
 
 body{
-    // background-color: purple;
+    overscroll-behavior: none;
     max-width: 100vw;
-    // min-height: 100vh;
     padding:0 !important;
 }
 
 
 main{
-    background-color: red;
+    background-color: $color1;
     height: max-content;
+    padding-top: $navHeight;
     
-    @media (max-width: 840px) {
-        padding-top: $navHeight;
-        
-    }
 }
 
 //FIXME

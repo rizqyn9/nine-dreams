@@ -3,8 +3,23 @@
     font-family: 'kenoky';
     src: url('/fonts/kenoky/KenokyLight.ttf');
 }
+@font-face {
+    font-family: 'bookman';
+    src: url('/fonts/bookman/bookmanoldstyle.ttf');
+}
+@font-face {
+    font-family: 'maghfire';
+    src: url('/fonts/maghfirea/Maghfirea.ttf');
+}
+@font-face {
+    font-family: 'redrose';
+    src: url('/fonts/redrose/RedRose-VariableFont_wght.ttf');
+}
 
 $fontKenoky:'kenoky', arial;
+$fontBookman:'bookman', arial;
+$fontMaghfire:'maghfire', arial;
+$fontRedRose:'redrose', arial;
 
 // Properties
 $navHeight:5rem;

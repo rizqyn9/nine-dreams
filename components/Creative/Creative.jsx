@@ -23,7 +23,7 @@ export default function Creative() {
 function CreativeItem(props) {
     const {data, index} = props;
     return (
-        <div className="creative-item" key={index}>
+        <div className="creative-item" key={`${index}-${data.title}`}>
             <img src={data.image} alt="" className="img-creative"/>
         </div>
     )

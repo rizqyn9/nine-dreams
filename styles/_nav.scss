@@ -11,39 +11,49 @@
     justify-content: space-between;
     align-items: center;
 
-    // border-bottom: 2px solid $color3;
-
-    @media (max-width: 600px) {
-        padding: 0 2rem 0 2rem;
-
-        .menu-container{
-            visibility: hidden;
-        }
+    .logo{
+        font-family: $fontBookman;
+        font-weight: 600;
+        font-size: 2rem;
     }
 
     .menu-container{
-        width: 30rem;
-        height: 100%;
+        width: max-content;
+        height: max-content;
         
         display: flex;
         justify-content: space-around;
         align-items: center;
 
-        
         .menu{
             width: 100%;
             height: 100%;
-
+            padding: 0 2rem 0 2rem;
+            
             display: flex;
             justify-content: center;
             align-items: center;
-
+            
+            font-family: $fontRedRose;
+            letter-spacing: .05em;
             white-space: nowrap;
-
+            
             &:hover{
                 background-color: $color3;
                 color: $color1;
             }
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 0 2rem 0 2rem;
+    }
+
+    @media (max-width: 1200px) {
+        // padding: 0 2rem 0 2rem;
+
+        .menu-container{
+            visibility: hidden;
         }
     }
 }
