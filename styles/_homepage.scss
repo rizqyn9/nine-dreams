@@ -193,9 +193,11 @@
                     display: flex;
                     align-items: flex-end;
                     // background-color: red;
+                    margin-top: 5rem;
 
                     .img-home-left{
-                        height: inherit;
+                        width: 100%;
+                        height: auto;
                         object-fit: contain;
                     }
                 }
@@ -210,6 +212,12 @@
             .content-overflow{
                 width: 90% !important;
             }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .img-container{
+            margin-top: 1rem !important;
         }
     }
 }
