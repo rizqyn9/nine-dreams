@@ -1,6 +1,8 @@
 import {HomePage as data} from "../../data-config"
 import React from 'react';
 import {motion} from 'framer-motion'
+import { ImageReveal } from "../_revealImages.util";
+
 
 export default function HomePage() {
     return(
@@ -42,48 +44,17 @@ export default function HomePage() {
                                     </motion.div>
                                 </motion.div>
                             </div>
-                            <div
-                            className="img-container">
-                                <motion.div className="overlay"
-                                    initial={{
-                                        x:"100%",
-                                        visibility:"hidden",
-                                    }}
-                                    animate={{
-                                        visibility:"visible",
-                                        x:"-120%",
-                                        transition:{
-                                            delay: -.7,
-                                            duration:2,
-                                            ease: "backInOut"
-                                        }
-                                    }}
-                                    >
-                                </motion.div>
-                                <motion.img alt="" className="img-home-left"
-                                    initial={{
-                                        scale: 1.5,
-                                        opacity:0
-                                    }}
-                                    animate={{
-                                        opacity:1,
-                                        scale:1,
-                                        transition : {
-                                            delay:1,
-                                            duration:1
-                                        }
-                                    }}
-                                    src={data.leftPage.image}/>
-                            </div>
+                            <ImageReveal className="img-home-left" src={data.leftPage.image}/>
                         </div>
                     </div>
                 </motion.div>
                 <div className="child-2">
                     <div className="right-content">
                         <div className="content-overflow">
-                            <div className="img-container">
-                                <img src={data.rightPage.image} alt="" />
-                            </div>
+                            <ImageReveal
+                                className="img-home-right"
+                                src={data.rightPage.image}
+                            />
                             <div className="title-container text-6xl">
                                 <div className="text-1">
                                     DO GOOD WORK
@@ -121,11 +92,4 @@ const variantReveal = {
             duration:1,
         }
     }
-}
-
-function Box(){
-    return(
-        <div className="box">
-        </div>
-    )
 }
