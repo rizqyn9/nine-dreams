@@ -2,6 +2,7 @@ import {HomePage as data} from "../../data-config"
 import React from 'react';
 import {motion} from 'framer-motion'
 import { ImageReveal } from "../_revealImages.util";
+import { RevealTitle } from "../_revealTitle";
 
 
 export default function HomePage() {
@@ -26,25 +27,17 @@ export default function HomePage() {
                                 <motion.div className="text-4xl text-1"
                                     initial="hidden"
                                     animate="visible"
-                                    variants={container}
+                                    // variants={container}
                                     transition={{
                                         delayChildren:1,
-                                        staggerChildren:.3
+                                        staggerChildren:.1
                                     }}
                                 >
-                                    <motion.div className="reveal"
-                                        variants={variantReveal}
-                                    >
-                                        EXPLORE
-                                    </motion.div> 
-                                    <motion.div className="reveal"
-                                        variants={variantReveal}
-                                    >
-                                        THE COLLECTION
-                                    </motion.div>
+                                    <RevealTitle className="reveal">EXPLORE</RevealTitle>
+                                    <RevealTitle className="reveal">THE COLLECTION</RevealTitle>
                                 </motion.div>
                             </div>
-                            <ImageReveal className="img-home-left" src={data.leftPage.image}/>
+                            <ImageReveal className="img-home-left zoom" src={data.leftPage.image}/>
                         </div>
                     </div>
                 </motion.div>
@@ -55,14 +48,18 @@ export default function HomePage() {
                                 className="img-home-right"
                                 src={data.rightPage.image}
                             />
-                            <div className="title-container text-6xl">
-                                <div className="text-1">
-                                    DO GOOD WORK
-                                </div>
-                                <div className="text-1">
-                                    FOR GOOD PEOPLE
-                                </div>
-                            </div>
+                            <motion.div className="title-container text-6xl"
+                                initial="hidden"
+                                animate="visible"
+                                transition={{
+                                    delay:1,
+                                    delayChildren:1,
+                                    staggerChildren:.1
+                                }}
+                            >
+                                <RevealTitle className="text-1">DO GOOD WORK</RevealTitle>
+                                <RevealTitle className="text-1">FOR GOOD PEOPLE</RevealTitle>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
@@ -71,25 +68,11 @@ export default function HomePage() {
     )
 }
 
-const container = {
-    hidden: {
+const container ={
+    hidden:{
 
     },
-    visible: {
+    visible:{
 
-    }
-}
-
-const variantReveal = {
-    hidden : {
-        opacity:0,
-        y:"5vh"
-    },
-    visible : {
-        y:"0",
-        opacity:1,
-        transition:{
-            duration:1,
-        }
     }
 }

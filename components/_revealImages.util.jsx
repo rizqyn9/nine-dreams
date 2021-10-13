@@ -12,11 +12,14 @@ export function ImageReveal(props) {
                 variants={imgRevContainer}
             >
             </motion.div>
-            <motion.img src={src} className={className}
-                variants={imgRev}
-                initial="hidden"
-                animate="visible"
-            />
+            <motion.figure>
+                <motion.img src={src} className={className}
+                    onHoverStart={()=> console.log("hahah")}
+                    variants={imgRev}
+                    initial="hidden"
+                    animate="visible"
+                />
+            </motion.figure>
         </div>
     )
 }

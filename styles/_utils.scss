@@ -93,3 +93,10 @@
         z-index: 1;
     }
 }
+
+.zoom{
+
+    &:hover{
+        width: 120%;
+    }
+}

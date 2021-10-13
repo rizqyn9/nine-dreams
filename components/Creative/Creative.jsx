@@ -12,7 +12,7 @@ export default function Creative() {
             <div className="creative-container">
                 {
                     creative.map((val,i) => {
-                        return <CreativeItem data={val} index={i}/>
+                        return <CreativeItem data={val} index={i} key={i}/>
                     })
                 }
             </div>

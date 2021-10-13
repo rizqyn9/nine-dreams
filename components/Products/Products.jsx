@@ -23,7 +23,7 @@ function ListContainer() {
         <div className="list-container">
             {
                 products.map((val, index) => {
-                    return <ProductItem data={val} key={index}/>
+                    return <ProductItem data={val} index={index} key={index}/>
                 })
             }
         </div>
@@ -31,11 +31,11 @@ function ListContainer() {
 }
 
 function ProductItem(props) {
-    const {data, key} = props;
+    const {data, index} = props;
 
     return (
-        <div className="product-item" key={`${key}-${data.title}` }>
+        <li className="product-item" key={index}>
             <img src={data.image} alt={data.title} />
-        </div>
+        </li>
     )
 }
