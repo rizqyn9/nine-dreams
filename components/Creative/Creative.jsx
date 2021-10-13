@@ -5,7 +5,7 @@ export default function Creative() {
     return(
         <section className="creative">
             <div className="wrap-content">
-                <div className="text-lg title-container">
+                <div className="text-6xl title-container">
                     Creative Communication
                 </div>
             </div>

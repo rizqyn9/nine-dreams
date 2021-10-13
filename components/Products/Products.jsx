@@ -6,7 +6,7 @@ export default function Products(){
         <section className="products">
             <div className="content-container">
                 <div className="top-products">
-                    <div className="title text-lg">
+                    <div className="text-2xl title ">
                         Top Products
                     </div>
                 </div>
@@ -35,7 +35,18 @@ function ProductItem(props) {
 
     return (
         <li className="product-item" key={index}>
-            <img src={data.image} alt={data.title} />
+            <figure>
+                <img src={data.image} alt={data.title} />
+            </figure>
+            <div className="data">
+                <div className="text-2xl title">
+                    {data.title ? data.title : "Null"}
+                </div>
+                <div className="text-lg price">
+                    Rp. {data.price}
+                </div>
+            </div>
+
         </li>
     )
 }

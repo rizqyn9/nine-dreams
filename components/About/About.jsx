@@ -2,12 +2,12 @@ export default function About() {
     return(
         <section className="about">
             <div className="content-container">
-                <div className="text-sm title ">
+                <div className="text-6xl title ">
                     About
                 </div>
-                <div className="text-md content">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis nam minima quod saepe impedit quia aperiam ex, recusandae quo sunt?
-                </div>
+                <div className="text-lg content">
+                We're born from an Environment that is not supportivr and full of pressure about the future. 
+We try to get out of that zone and make up our minds by doing things that we think are good by considering various parties.                </div>
             </div>
         </section>
     )

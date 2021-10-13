@@ -20,7 +20,7 @@ export const creative = [
 export const products = [
   {
     image: "/images/1.webp",
-    title: "",
+    title: "Data 1",
     category: "",
   },
   {

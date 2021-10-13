@@ -14,7 +14,6 @@ export function ImageReveal(props) {
             </motion.div>
             <motion.figure>
                 <motion.img src={src} className={className}
-                    onHoverStart={()=> console.log("hahah")}
                     variants={imgRev}
                     initial="hidden"
                     animate="visible"

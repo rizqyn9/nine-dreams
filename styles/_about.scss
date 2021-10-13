@@ -12,14 +12,13 @@
         justify-content: center;
         align-items: center;
 
-        .title{
-            flex: 0 0 10vh;
-
+        .title{            
+            margin-bottom: 1rem;
+            
             font-weight: 900;
-            font-size: 3rem;
             font-style: italic;
         }
-
+        
         .content{
             width: 60%;
             text-align: center;
@@ -32,6 +31,11 @@
 
         .content-container{
             width: 100%;
+            min-height: 50vh;
+
+            .title{            
+                min-height: 10vh;
+            }
 
             .content{
                 width: 90%;
