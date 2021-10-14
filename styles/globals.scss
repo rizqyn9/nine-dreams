@@ -11,6 +11,9 @@ body{
     overscroll-behavior: none;
     max-width: 100vw;
     padding:0 !important;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 
