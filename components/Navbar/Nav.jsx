@@ -1,10 +1,12 @@
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import {motion} from "framer-motion"
 
 export default function Nav (){
-    useEffect(() => {
+    const [navActive, setNavActive] = useState(false);
 
-    }, [])
+    function handleNavBtn() {
+        setNavActive(!navActive)
+    }
 
     return (
         <motion.nav 
@@ -20,7 +22,8 @@ export default function Nav (){
             className="nav padding-container"
         >
             <div className="logo">ninedreams</div>
-            <div className="menu-container">
+            <div className={`btn-nav${navActive? "-active" : ""}`} onClick={handleNavBtn}>Button</div>
+            <div className={`menu-container ${navActive? "menu-active" : ""}`}>
                 <MenuItem name="home"/>
                 <MenuItem name="products"/>
                 <MenuItem name="creative communication"/>

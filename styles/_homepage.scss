@@ -170,10 +170,10 @@
 // 850px
 
 .homepage{
-    @media (max-width: 850px) {
+    @media (max-width: 850px), (orientation: portrait){
         max-height: max-content !important;
         height: max-content;
-
+        
         .content-container{
             padding-top: 0;
             padding-bottom: 2rem;
@@ -197,12 +197,23 @@
                     line-height: 3em;
                 }
 
+                @media (orientation: portrait) {
+                    .img-container{
+                        height: 100% !important;   
+                        width: auto !important;
+                        .img-home-left{
+                            height: 100% !important;
+                        }
+                    }
+                }
                 .img-container{
                     width: 100%;
                     display: flex;
                     align-items: flex-end;
+                    position: relative;
                     // background-color: red;
 
+                    
                     figure{
                         width: 100%;
                         position: relative;
@@ -210,8 +221,8 @@
 
                         .img-home-left{
                             display: block;
-                            // width: 100% !important;
-                            height: 70vh;
+                            width: 90vw;
+                            // height: 70vh;
                             // object-fit: contain;
                         }
                     }
