@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
 import {motion} from "framer-motion"
 
 export default function Nav (){
@@ -22,7 +22,7 @@ export default function Nav (){
             className="nav padding-container"
         >
             <div className="logo">ninedreams</div>
-            <div className={`btn-nav${navActive? "-active" : ""}`} onClick={handleNavBtn}>Button</div>
+            <div className={`btn-nav${navActive? "-active" : ""}`} onClick={handleNavBtn}>|||</div>
             <div className={`menu-container ${navActive? "menu-active" : ""}`}>
                 <MenuItem name="home"/>
                 <MenuItem name="products"/>

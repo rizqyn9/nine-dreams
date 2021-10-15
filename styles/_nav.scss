@@ -3,7 +3,7 @@
     width: 100%;
     
     position: fixed;
-    z-index: 100;
+    z-index: 200;
     
     background-color: $color2;
 
@@ -19,10 +19,6 @@
 
     .btn-nav{
         display: none;
-        position: absolute;
-        z-index: 2000;
-        right: 10%;
-        top: 5%;
         &-active{
             background-color: red;
         }
@@ -70,7 +66,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                z-index: 1;
+                z-index: -1;
                 display: flex;
                 flex-direction: column;
             
