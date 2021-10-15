@@ -1,9 +1,11 @@
 .nav{
     height: $navHeight;
     width: 100%;
+    max-width: 100vw;
     
     position: fixed;
     z-index: 200;
+    padding: 0;
     
     background-color: $color2;
 
@@ -19,9 +21,6 @@
 
     .btn-nav{
         display: none;
-        &-active{
-            background-color: red;
-        }
     }
 
     .menu-container{
@@ -52,13 +51,22 @@
         }
     }
 
-    @media (max-width: 600px) {
-        padding: 0 2rem 0 2rem;
-    }
+    @media (orientation: portrait) {
+        .btn-nav{
+            display: block;
+            
+            &-active{
+                // color: red;
+                letter-spacing: .2em;
+            }
+        }
 
-    @media (max-width: 1200px) {
-        // padding: 0 2rem 0 2rem;
         .menu-container{
+            z-index: -1;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
             &.menu-active{
                 width: 100vw;
@@ -66,28 +74,54 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                z-index: -1;
+                
                 display: flex;
-                flex-direction: column;
-            
+
                 background-color: $color1;
-                justify-content: center;
-            
-                .menu{
-                    height: 5vh;
-            
-                }
+            }
+
+            .menu{
+                max-height: 10vh;
             }
         }
-
-        .btn-nav{
-            display: block;
-        }
-
-        .menu-container{
-            // visibility: hidden;
-            display: none;
-        }
     }
+
+    @media (max-width: 600px) {
+        padding: 0 2rem 0 2rem;
+    }
+
+    // @media (max-width: 1200px) {
+    //     // padding: 0 2rem 0 2rem;
+    //     .menu-container{
+
+    //         &.menu-active{
+    //             width: 100vw;
+    //             height: 100vh;
+    //             position: absolute;
+    //             top: 0;
+    //             left: 0;
+    //             z-index: -1;
+    //             display: flex;
+    //             flex-direction: column;
+            
+    //             background-color: $color1;
+    //             justify-content: center;
+            
+    //             .menu{
+    //                 height: 5vh;
+            
+    //             }
+    //         }
+    //     }
+
+    //     .btn-nav{
+    //         display: block;
+    //     }
+
+    //     .menu-container{
+    //         // visibility: hidden;
+    //         display: none;
+    //     }
+    // }
     
 }

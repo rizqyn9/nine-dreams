@@ -23,14 +23,21 @@ export default function Nav (){
         >
             <div className="logo">ninedreams</div>
             <div className={`btn-nav${navActive? "-active" : ""}`} onClick={handleNavBtn}>|||</div>
-            <div className={`menu-container ${navActive? "menu-active" : ""}`}>
-                <MenuItem name="home"/>
-                <MenuItem name="products"/>
-                <MenuItem name="creative communication"/>
-                <MenuItem name="about"/>
-                <MenuItem name="contact"/>
-            </div>
+            <NavMenu active={navActive}/>
         </motion.nav>
+    )
+}
+
+function NavMenu(props) {
+    const {active} = props;
+    return (
+        <motion.div className={`menu-container ${active ? "menu-active" : ""}`}>
+            <MenuItem name="home"/>
+            <MenuItem name="products"/>
+            <MenuItem name="creative communication"/>
+            <MenuItem name="about"/>
+            <MenuItem name="contact"/>
+        </motion.div>
     )
 }
 
