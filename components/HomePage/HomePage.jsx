@@ -7,7 +7,7 @@ import { RevealTitle } from "../_revealTitle";
 
 export default function HomePage() {
     return(
-        <section className="homepage">
+        <section className="homepage" id="homepage">
             <div className="content-container">
                 <motion.div className="child-1"
                     initial={{

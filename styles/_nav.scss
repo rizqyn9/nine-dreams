@@ -103,30 +103,6 @@
         .nav-active{
 
         }
-
-        // .menu-container{
-        //     z-index: -1;
-        //     display: none;
-        //     flex-direction: column;
-        //     justify-content: center;
-        //     align-items: center;
-
-        //     &.menu-active{
-        //         width: 100vw;
-        //         height: 100vh;
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-                
-        //         display: flex;
-
-        //         background-color: $color1;
-        //     }
-
-        //     .menu{
-        //         max-height: 10vh;
-        //     }
-        // }
     }
 
     @media (max-width: 600px) {

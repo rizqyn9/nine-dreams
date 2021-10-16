@@ -3,7 +3,7 @@ import {creative} from "../../data-config"
 
 export default function Creative() {
     return(
-        <section className="creative">
+        <section className="creative" id="creative">
             <div className="wrap-content">
                 <div className="text-6xl title-container">
                     Creative Communication

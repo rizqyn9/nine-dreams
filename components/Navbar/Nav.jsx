@@ -7,7 +7,10 @@ export default function Nav (){
 
     function handleNavBtn() {
         setNavActive(!navActive)
-        console.log("asdad");
+    }
+
+    function handleMenuMobile(data) {
+        setNavActive(false);
     }
 
     return (
@@ -25,14 +28,18 @@ export default function Nav (){
         >
             <div className="logo">ninedreams</div>
             <div className={`btn-nav${navActive? "-active" : ""}`} onClick={handleNavBtn}>|||</div>
-            <NavContainerMobile  active={navActive}/>
+            <NavContainerMobile  active={navActive} handle={handleMenuMobile} useScroll/>
             <NavMenu/>
         </motion.nav>
     )
 }
 
+function handleScroll(target) {
+    document.getElementById(target).scrollIntoView();
+}
+
 function NavContainerMobile(props) {
-    const {active} = props;
+    const {active, useScroll} = props;
     const animController = useAnimation();
 
     const variant = {
@@ -49,12 +56,16 @@ function NavContainerMobile(props) {
     useEffect( async () => {
         if(active){
             await animController.start("open")
-
         } else {
-            animController.start("close")
+            await animController.start("close")
         }
     }, [active])
 
+    function handleMenuClick(data) {
+        // console.log(data);
+        props.handle(data);
+        handleScroll(data);
+    }
     return(
         <motion.div className={`menu-container-mobile nav-active`}
             variants={variant}
@@ -67,17 +78,17 @@ function NavContainerMobile(props) {
                 when: active ? "beforeChildren" : "afterChildren"
             }}
         >
-            <MenuItemMobile name="home"/>
-            <MenuItemMobile name="products"/>
-            <MenuItemMobile name="creative communication"/>
-            <MenuItemMobile name="about"/>
-            <MenuItemMobile name="contact"/>
+            <MenuItemMobile name="home" target="homepage" handle={handleMenuClick}/>
+            <MenuItemMobile name="products" target="products" handle={handleMenuClick}/>
+            <MenuItemMobile name="creative communication" target="creative" handle={handleMenuClick}/>
+            <MenuItemMobile name="about" target="about" handle={handleMenuClick}/>
+            <MenuItemMobile name="contact" target="contact" handle={handleMenuClick}/>
         </motion.div>
     )
 }
 
 function MenuItemMobile(props) {
-    const {name } = props;
+    const {name, target } = props;
 
     const variant = {
         open: {
@@ -95,6 +106,7 @@ function MenuItemMobile(props) {
             transition={{
                 duration:.3
             }}
+            onClick={() => props.handle(target)}
         >
             {name}
         </motion.div>
@@ -106,19 +118,25 @@ function NavMenu(props) {
     return (
         <motion.div className={`menu-container`}
         >
-            <MenuItem name="home"/>
-            <MenuItem name="products"/>
-            <MenuItem name="creative communication"/>
-            <MenuItem name="about"/>
-            <MenuItem name="contact"/>
+            <MenuItem name="home" target="homepage"/>
+            <MenuItem name="products" target="products"/>
+            <MenuItem name="creative communication" target="creative"/>
+            <MenuItem name="about" target="about"/>
+            <MenuItem name="contact" target="contact"/>
         </motion.div>
     )
 }
 
 function MenuItem(props){
-    const {name} = props;
+    const {name, target} = props;
+
+    function handleOnClick() {
+        handleScroll(target)
+    }
     return (
-        <motion.div className="menu">
+        <motion.div className="menu" 
+            onClick={handleOnClick}
+        >
             {name}
         </motion.div>
     )

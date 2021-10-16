@@ -1,6 +1,6 @@
 export default function Contact() {
     return (
-        <section className="contact">
+        <section className="contact" id="contact">
             <div className="content-container">
                 <div className="text-4xl title">
                     Contact

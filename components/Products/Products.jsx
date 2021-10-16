@@ -3,7 +3,7 @@ import React from "react"
 
 export default function Products(){
     return (
-        <section className="products">
+        <section className="products" id="products">
             <div className="content-container">
                 <div className="top-products">
                     <div className="text-2xl title ">
