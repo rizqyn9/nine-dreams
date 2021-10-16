@@ -13,13 +13,16 @@
     justify-content: space-between;
     align-items: center;
 
+    user-select: none;
+    user-zoom: none;
+
     .logo{
         font-family: $fontBookman;
         font-weight: 600;
         font-size: 2rem;
     }
 
-    .btn-nav{
+    .btn-nav, .menu-container-mobile{
         display: none;
     }
 
@@ -52,38 +55,78 @@
     }
 
     @media (orientation: portrait) {
-        .btn-nav{
-            display: block;
-            
-            &-active{
-                // color: red;
-                letter-spacing: .2em;
-            }
-        }
-
         .menu-container{
-            z-index: -1;
             display: none;
+
+        }
+        .btn-nav {
+            display: block;
+        }
+        
+        .menu-container-mobile{
+            min-width: 100vw;
+            min-height: 100vh;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: -1;
+
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
-            &.menu-active{
-                width: 100vw;
-                height: 100vh;
-                position: absolute;
-                top: 0;
-                left: 0;
-                
+            background-color: $color1;
+            
+            .menu-mobile{
+                width: 100%;
+                padding: .5em 0 .5em 1.2rem;
+
                 display: flex;
+                justify-content: flex-start;
+                align-items: center;
 
-                background-color: $color1;
-            }
+                font-family: $fontKenoky;
+                font-size: 1.8rem;
+                font-weight: bolder;
 
-            .menu{
-                max-height: 10vh;
+                transition: all .3s ease-out;
+
+                &:hover{
+                    background-color: $color3;
+                    color: $color1;
+                    padding-left: 3rem;
+                    transform: scale(1.2);
+                }
             }
         }
+        .nav-active{
+
+        }
+
+        // .menu-container{
+        //     z-index: -1;
+        //     display: none;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     align-items: center;
+
+        //     &.menu-active{
+        //         width: 100vw;
+        //         height: 100vh;
+        //         position: absolute;
+        //         top: 0;
+        //         left: 0;
+                
+        //         display: flex;
+
+        //         background-color: $color1;
+        //     }
+
+        //     .menu{
+        //         max-height: 10vh;
+        //     }
+        // }
     }
 
     @media (max-width: 600px) {
