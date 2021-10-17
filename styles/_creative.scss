@@ -46,14 +46,20 @@
             padding-bottom: unset;
         }
     }
-
-
+    
+    
     @media (max-width: 750px) {
         
         .creative-container{
             padding: 0rem 0 2rem 0;
             justify-content: space-around;
             gap: 2rem;
+        }
+    }
+
+    @media (max-width: 440px) {
+        
+        .title-container{
         }
     }
 }

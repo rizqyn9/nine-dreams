@@ -57,6 +57,18 @@
         &-lg{
             font-size: 1.4rem;
         }
+        &-xl{
+            font-size: 1.6rem;
+        }
+        &-2xl{
+            font-size: 1.9rem;
+        }
+        &-4xl{
+            font-size: 2.1rem;
+        }
+        &-6xl{
+            font-size: 2.5rem;
+        }
     }
     @media (max-width: 420px) {
         &-sm{
@@ -67,6 +79,18 @@
         }
         &-lg{
             font-size: 1.2rem;
+        }
+        &-xl{
+            font-size: 1.4rem;
+        }
+        &-2xl{
+            font-size: 1.6rem;
+        }
+        &-4xl{
+            font-size: 1.9rem;
+        }
+        &-6xl{
+            font-size: 2.1rem;
         }
     }
 }
