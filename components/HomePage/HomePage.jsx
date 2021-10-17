@@ -21,7 +21,6 @@ export default function HomePage() {
     }
     
     const [Ref1, InView1, Entry1] = useInView({
-        threshold: .2
     });
     const [Ref2, InView2, Entry2] = useInView({
         threshold: .2
