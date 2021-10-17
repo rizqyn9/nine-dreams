@@ -1,26 +1,49 @@
-import {motion} from "framer-motion"
+import {motion, useAnimation} from "framer-motion"
+import { useEffect } from "react";
 
 
 export function ImageReveal(props) {
-    const {className, src} = props;
+    const anim = useAnimation();
+    const {className, src, inView} = props;
+
+
+    useEffect(() => {
+        console.log(`${inView} asdad`);
+        if(inView){
+            anim.start("visible");
+        } else {
+            anim.start("hidden");
+        }
+    }, [inView])
 
     return (
-        <div className="img-container">
+        <motion.div className="img-container"
+            animate={anim}
+        >
             <motion.div className="overlay"
-                initial="hidden"
-                animate="visible"
+                // initial="hidden"
                 variants={imgRevContainer}
             >
             </motion.div>
             <motion.figure>
                 <motion.img src={src} className={className}
                     variants={imgRev}
-                    initial="hidden"
-                    animate="visible"
+                    // initial="hidden"
                 />
             </motion.figure>
-        </div>
+        </motion.div>
     )
+}
+
+const container = {
+    hidden: {
+        backgorund: "red",
+        
+    }, 
+    visible: {
+        x:0,
+        backgorund: "red",
+    }
 }
 
 const imgRevContainer = {

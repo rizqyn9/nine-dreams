@@ -5,9 +5,10 @@
     
     position: fixed;
     z-index: 200;
-    padding: 0;
+    padding: 0 3rem 0 3rem;
     
     background-color: $color2;
+    color: $color3;
 
     display: flex;
     justify-content: space-between;
